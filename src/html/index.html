@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/src/img/favicon.ico" type="image/x-icon">
+    <title>Test</title>
+</head>
+
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top mb-5 shadow" id="header">
+        <div class="container">
+            <a class="navbar-brand" href="/">hsDecks</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="yourDeckBtn">Your deck</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Deck Collection
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#" id="allDecksBtn">All Decks</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Druid</a>
+                            <a class="dropdown-item" href="#">Hunter</a>
+                            <a class="dropdown-item" href="#">Mage</a>
+                            <a class="dropdown-item" href="#">Paladin</a>
+                            <a class="dropdown-item" href="#">Priest</a>
+                            <a class="dropdown-item" href="#">Rogue</a>
+                            <a class="dropdown-item" href="#">Shaman</a>
+                            <a class="dropdown-item" href="#">Warlock</a>
+                            <a class="dropdown-item" href="#">Warrior</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <div class="container h-100" id="showDeckPage">
+        <div class="card border-0 shadow my-5">
+            <div class="card-body p-5 text-light">
+                <form id="deckCode">
+                    <div class="form-group">
+                        <label for="deckHash">Deck Code:</label>
+                        <input id="deckHash" type="text" name="deckHash" class="form-control"
+                               aria-describedby="deckHelp"
+                               placeholder="Paste Your Deck">
+                        <small id="deckHelp" class="form-text text-muted">Write some text here</small>
+                    </div>
+                    <button type="submit" class="btn btn-dark" data-toggle="modal" data-target="#exampleModalLong">
+                        Check
+                    </button>
+                </form>
+                <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog"
+                     aria-labelledby="modalTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalTitle">Deck</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="deckList">
+                                    <ul>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-dark" id="copyDeckBtn">Copy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container h-100" id="deckList">
+        <div class="card border-0 shadow my-5">
+            <div class="card-body p-5 text-light">
+                <div class="row" id="heroClasses">
+                    <img src="/src/img/class-warrior.png" class="rounded" alt="">
+                    <img src="/src/img/class-druid.png" class="rounded" alt="">
+                    <img src="/src/img/class-hunter.png" class="rounded" alt="">
+                    <img src="/src/img/class-mage.png" class="rounded" alt="">
+                    <img src="/src/img/class-paladin.png" class="rounded" alt="">
+                    <img src="/src/img/class-priest.png" class="rounded" alt="">
+                    <img src="/src/img/class-rogue.png" class="rounded" alt="">
+                    <img src="/src/img/class-shaman.png" class="rounded" alt="">
+                    <img src="/src/img/class-warlock.png" class="rounded" alt="">
+                </div>
+                <div class="row">
+                    <table class="table table-primary table-hover" id="listOfDecks">
+                        <thead class="table-secondary">
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Deck Name</th>
+                            <th scope="col">Dust Cost</th>
+                            <th scope="col">Date</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row"><img src="/src/img/class-rogue.png" class="rounded-circle" alt=""></th>
+                            <td>Hopper Rogue</td>
+                            <td>9920</td>
+                            <td>24.05.2019</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><img src="/src/img/class-warrior.png" class="rounded-circle" alt=""></th>
+                            <td>Control Warrior</td>
+                            <td>12000</td>
+                            <td>04.06.2019</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><img src="/src/img/class-shaman.png" class="rounded-circle" alt=""></th>
+                            <td>Control Shaman</td>
+                            <td>11200</td>
+                            <td>02.06.2019</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</main>
+<footer class="footer font-small blue fixed-bottom">
+
+    <div class="container">
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2019 · Этот сайт не имеет отношения к Blizzard Entertainment.
+        </div>
+        <!-- Copyright -->
+    </div>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,210 @@
+$bg-color: rgba(0, 0, 0, 0.6);
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:400,500,600,700");
+
+#heroClasses img {
+  height: 50px;
+  margin-right: 5px;
+}
+
+#heroClasses {
+  padding-bottom: 10px;
+}
+
+#listOfDecks img {
+  height: 20px;
+}
+
+.modal-content {
+  background-color: $bg-color;
+  border: 0;
+}
+
+#header {
+  background-color: $bg-color !important;
+}
+
+.close {
+  color: white;
+}
+
+.btn {
+  padding: 7px;
+}
+
+.footer {
+  flex: 0 0 auto;
+  width: 100%;
+  background-color: $bg-color !important;
+}
+
+.card {
+  background-color: $bg-color !important;
+}
+
+.footer-copyright {
+  color: white;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+#showDeckPage {
+  display: none;
+}
+
+#deckList {
+  //opacity: 0.8;
+  display: none;
+}
+
+.table-primary, .table-primary > th, .table-primary > td {
+  background-color: rgba(123, 131, 138, 0.5);
+}
+
+.table-primary th, .table-primary td, .table-primary thead th, .table-primary tbody + tbody {
+  border: 0;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  background: url('https://www.hearthstonetopdecks.com/wp-content/uploads/2018/11/desktop-wallpaper-rastakhans-rumble002.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  height: 100%;
+}
+
+
+ul {
+  width: auto;
+  height: auto;
+  padding-inline-start: 0;
+  list-style-type: none;
+}
+
+.card-background {
+  text-align: right;
+  margin-bottom: 3px;
+  line-height: 35px;
+  vertical-align: middle;
+  padding-right: 5px;
+  padding-left: 10px;
+  padding-top: 5px;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 40px;
+  width: 350px;
+  min-width: 220px;
+  box-shadow: inset 30px 0 0 #286eb2, inset 230px 0 20px #272B30;
+}
+
+.deckList {
+  display: inline-flex;
+  width: auto;
+  font-size: 18px;
+  color: white;
+}
+
+.card-gem-common {
+  font-weight: 600;
+  margin-top: -39px;
+  line-height: 37px;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  text-shadow: 1px 1px 3px black;
+}
+
+.card-name {
+  position: absolute;
+  line-height: 45px;
+  padding-left: 35px;
+  min-width: 220px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.card-show {
+  z-index: 1;
+  display: none;
+  position: fixed;
+  top: 10%;
+  left: 400px;
+  width: 256px;
+  height: 387px;
+}
+
+#deck-coast {
+  color: white;
+  font-weight: 900;
+  text-align: justify;
+  margin-left: 10px;
+}
+
+.card-count {
+  position: relative;
+  display: inline-flex;
+  left: 120px;
+}
+
+.modal-body {
+  text-align: center;
+}
+
+.card-rarity {
+  position: absolute;
+  text-align: right;
+  line-height: 35px;
+  vertical-align: middle;
+  padding-top: 5px;
+  padding-right: 4px;
+  margin-top: -43px;
+  width: 370px;
+  box-shadow: inset -30px 0 0 #272B30;
+  font-weight: 500;
+}
+
+@media (max-width: 400px) {
+  .card-background {
+    //height: 100%;
+    width: 300px;
+    box-shadow: inset 30px 0 0 #286eb2, inset 200px 0 20px #272B30;
+  }
+  .deckList {
+    margin-left: -25px;
+  }
+
+  .card-name {
+    font-size: 80%;
+  }
+
+  .card-count {
+    left: 120px;
+  }
+
+  #deck-coast {
+    margin-left: 10px;
+    font-size: 80%;
+  }
+
+  .card-rarity {
+    position: absolute;
+    text-align: right;
+    line-height: 35px;
+    vertical-align: middle;
+    padding-top: 5px;
+    padding-right: 2px;
+    margin-top: -43px;
+    width: 320px;
+    box-shadow: inset -30px 0 5px #343a40;
+  }
+
+  table {
+    font-size: 10px;
+  }
+}
